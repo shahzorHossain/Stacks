@@ -1,6 +1,6 @@
 # Stacks
 
-An Instagram clone which lets users post, comment and like each other's photos.
+An Instagram clone which lets users post, comment and like each other's photos. Made using React, Redux, Express and Webpack.
 
 ## Running
 
