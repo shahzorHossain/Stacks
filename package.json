@@ -8,15 +8,13 @@
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
     "clean": "rimraf dist",
     "start": "node devServer.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wesbos/Learn-Redux.git"
   },
   "author": "Wes Bos",
   "license": "MIT",
-  "homepage": "https://github.com/wesbos/Learn-Redux",
+  "homepage": "http://shahzorHossain.github.io/Stacks",
   "dependencies": {
     "babel-core": "^6.7.7",
     "babel-eslint": "^6.0.4",
@@ -56,6 +54,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "expect": "^1.18.0",
     "expect-jsx": "^2.5.1",
+    "gh-pages": "^1.2.0",
     "mocha": "^5.2.0",
     "prettier": "1.14.0",
     "react-addons-test-utils": "^15.0.2"
