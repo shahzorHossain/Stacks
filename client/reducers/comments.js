@@ -4,7 +4,9 @@
 // 2. copy of current state
 // then updates the current store
 
-export default function comments(state = [], action) {
+function comments(state = [], action) {
   console.log(state, action);
   return state;
 }
+
+export default comments;

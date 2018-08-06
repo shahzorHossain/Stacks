@@ -17,8 +17,7 @@ const defaultState = {
 //creating initial default store
 const store = createStore(rootReducer, defaultState);
 
+//export makes data transfer from one file to another
 export const history = syncHistoryWithStore(browserHistory, store);
 
 export default store;
-
-//export makes data transfer from one file to another
