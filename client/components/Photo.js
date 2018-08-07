@@ -20,7 +20,7 @@ class Photo extends Component {
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
           >
-            <span key="post.likes" className="likes-heart">
+            <span key={post.likes} className="likes-heart">
               {post.likes}
             </span>
           </CSSTransitionGroup>
@@ -28,10 +28,16 @@ class Photo extends Component {
         <figcaption>
           <p>{post.caption}</p>
           <div className="control-buttons">
-            <button className="likes"> &hearts; {post.likes}</button>
+            <button
+              className="likes"
+              onClick={this.props.increment.bind(null, index)}
+            >
+              {' '}
+              &hearts; {post.likes}
+            </button>
             <Link className="button" to={`/view/${post.code}`}>
               <span className="comment-count">
-                <span className="speech-bubble" />
+                <span className="speech-bubble" />{' '}
                 {comments[post.code] ? comments[post.code].length : 0}
               </span>
             </Link>
